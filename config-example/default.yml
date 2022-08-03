@@ -1,0 +1,16 @@
+server:
+  port:
+
+db:
+  type: 'postgres'
+
+jwt:
+  expiresIn: 253402300000000
+
+APPLE_PAY:
+  LIVE_URL: 'https://buy.itunes.apple.com/verifyReceipt'
+  SANDBOX_URL: 'https://sandbox.itunes.apple.com/verifyReceipt'
+
+MESSAGE_BIRD:
+  KEY: ''
+  PHONE: ''

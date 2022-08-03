@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="robots" content="index, follow">
+  <meta name="googlebot" content="index, follow">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="msapplication-TileImage" content="{{ icon }}" />
+
+  <meta property="og:locale" content="hy_AM" />
+  <meta property="og:site_name" content="{{ user.name }}" />
+  <meta property="og:title" content="{{ user.name }}" />
+  <meta property="og:url" content="{{ sharedUrl }}" />
+  <meta property="og:type" content="article" />
+  <meta property="og:description" content="{{ user.report }}" />
+  <meta property="og:image:secure_url" content="{{ imageUrl }}" />
+  <meta property="og:image:width" content="500" />
+  <meta property="og:image:height" content="500" />
+  <meta property="og:image:url" content="{{ imageUrl }}" />
+
+  <meta itemprop="name" content="{{ user.name }}" />
+  <meta name='keywords' content="secret language network, relationships, online chat, horoscope, social networking service, dating, online dating service, social network, business, romance, books, astrology or friendship" />
+  <meta itemprop="headline" content="{{ user.name }}" />
+  <meta itemprop="description" content="{{ user.report }}" />
+  <meta itemprop="image" content="{{ imageUrl }}" />
+
+  <meta name="twitter:title" content="{{ user.name }}" />
+  <meta name="twitter:url" content="{{ sharedUrl }}" />
+  <meta name="twitter:description" content="{{ user.report }}" />
+  <meta name="twitter:image" content="{{ imageUrl }}" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@SecretLanguage" />
+
+  <link rel="canonical" href="{{ sharedUrl }}" />
+  <meta name="description" content="{{ user.report }}" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="icon" href="https://sln-storage.s3.us-east-2.amazonaws.com/icons/%F0%9F%92%96+icon.png" size="16x16" type="image/jpg">
+  <title>{{ user.name }}</title>
+  <style>
+    body {
+      color: #FFFFFF;
+      background: #091624;
+    }
+
+    .solar-bg {
+      background-image: url('https://sln-storage.s3.us-east-2.amazonaws.com/icons/solar-system-background.png') !important;
+      width: 100vw !important;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      mix-blend-mode: normal !important;
+    }
+
+    .wave-bg {
+      width: 100% !important;
+      background: none !important;
+    }
+
+    .main-header {
+      font-family: 'SignPainter';
+      font-style: italic;
+      font-weight: 600;
+      font-size: 55px;
+      line-height: 78px;
+      /* identical to box height, or 142% */
+
+      text-align: center;
+      letter-spacing: 0.1375px;
+
+      color: #FFFFFF;
+    }
+
+    .border-icon {
+      width: 300px !important;
+      height: 300px !important;
+
+      border-radius: 50% !important;
+    }
+
+    .image-section {
+      display: flex !important;
+      justify-content: center !important;
+      align-items: center !important;
+
+      margin: 0 auto !important;
+      width: 441px !important;
+      height: 441px !important;
+
+      background-image: url('https://sln-storage.s3.us-east-2.amazonaws.com/icons/border-icon.svg') !important;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .name-age {
+      font-family: Times;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 50px;
+      line-height: 57px;
+      text-align: center;
+      text-transform: uppercase;
+
+      color: #AE9463;
+    }
+
+    .location {
+      font-family: Gilroy;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 34px;
+      line-height: 34px;
+      /* or 101% */
+
+      text-align: center;
+
+      color: #FFFFFF;
+    }
+
+    .description-section {
+      display: flex !important;
+      justify-content: center !important;
+      align-items: center !important;
+      flex-direction: column !important;
+
+      margin: 0 auto !important;
+      width: 100vw !important;
+    }
+
+    .sl-icon {
+      width: 250px !important;
+      height: 250px !important;
+    }
+
+    .sl-name-description {
+      font-family: Gilroy;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 25px;
+      line-height: 40px;
+      /* identical to box height, or 160% */
+
+      text-align: center;
+
+      color: #FFFFFF;
+
+      mix-blend-mode: normal;
+      opacity: 0.5;
+    }
+
+    .sl-name {
+      font-family: AppleMyungjo;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 50px;
+      line-height: 35px;
+      /* identical to box height, or 70% */
+
+      text-align: center;
+      letter-spacing: 0.125px;
+      text-transform: uppercase;
+
+      color: #FFFFFF;
+    }
+
+    .famous-years {
+      width: 40%;
+      font-family: Avenir;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 25px;
+      /* or 120% */
+
+      text-align: center;
+
+      color: #FFFFFF;
+    }
+
+    .section-title {
+      max-width: 85% !important;
+      font-family: Gilroy;
+      font-style: normal;
+      font-weight: 800;
+      font-size: 36px;
+      line-height: 45px;
+      /* identical to box height */
+
+      text-align: center;
+      text-transform: uppercase;
+
+      color: #AE9463;
+    }
+
+    .section-description {
+      width: 85% !important;
+      font-family: Gilroy;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 24px;
+      line-height: 28px;
+      /* or 117% */
+
+      text-align: justify;
+
+      color: #FFFFFF;
+
+      mix-blend-mode: normal;
+      opacity: 0.7;
+    }
+
+    .footer {
+      display: flex !important;
+      justify-content: center !important;
+      align-items: center !important;
+      flex-direction: column !important;
+
+      width: 100% !important;
+      height: 200px !important;
+      background: #050E17 !important;
+
+      font-family: Avenir;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 24px;
+      line-height: 31px;
+      /* or 129% */
+
+      text-align: center;
+
+      color: #FFFFFF;
+    }
+
+    @media screen and (max-width: 576px) {
+      .main-header {
+        font-size: 34px;
+        line-height: 55px;
+      }
+
+      .image-section {
+        width: 350px !important;
+        height: 350px !important;
+
+        background-image: url('https://sln-storage.s3.us-east-2.amazonaws.com/icons/border-icon.svg') !important;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      .border-icon {
+        width: 240px !important;
+        height: 240px !important;
+      }
+
+      .name-age {
+        font-size: 32px !important;
+        line-height: 40px !important;
+      }
+
+      .location {
+        font-size: 26px !important;
+        line-height: 26px !important;
+      }
+
+      .sl-icon {
+        width: 200px !important;
+        height: 200px !important;
+      }
+
+      .sl-name-description {
+        font-size: 16px !important;
+        line-height: 30px !important;
+      }
+
+      .sl-name {
+        font-size: 22px !important;
+        line-height: 29px !important;
+      }
+
+      .famous-years {
+        width: 90% !important;
+        font-size: 14px !important;
+        line-height: 18px !important;
+      }
+
+      .section-title {
+        font-size: 28px !important;
+        line-height: 36px !important;
+      }
+
+      .section-description {
+        font-size: 15px !important;
+        line-height: 24px !important;
+      }
+
+      .footer {
+        height: 150px !important;
+        font-size: 13px;
+        line-height: 14px;
+      }
+
+      .footer-line {
+        width: 80% !important;
+      }
+    }
+
+    @media screen and (max-width: 1000px) {
+      .sl-name {
+        font-size: 30px;
+        line-height: 34px;
+      }
+
+      .famous-years {
+        width: 70% !important;
+      }
+    }
+  </style>
+</head>
+
+<body class="w-100 p-0 m-0" style="box-sizing: border-box;">
+  <div class="d-flex justify-content-center align-items-center d-md-none border-bottom w-100 px-4 row m-0 py-0"
+    style="border-color: #AE9463 !important; min-height: 75px !important;">
+    <p class="d-flex justify-start col-7 my-auto" style="background: #091624 !important;">
+      <img src="https://sln-storage.s3.us-east-2.amazonaws.com/icons/%F0%9F%92%96+icon.png"
+        class="rounded float-left p-1" width="45" height="45" alt="App Icon"
+        style="border: 1px solid #AE9463 !important;">
+      <span class="my-auto mx-2" style="font-size: 10.5px;">Secret Language of Birthdays & Relationships</span>
+    </p>
+    <p class="d-flex justify-content-end align-baseline col-5 my-auto">
+      <a href="https://apps.apple.com/us/app/secret-language-of-birthdays/id1558133582">
+        <button type="button" class="btn btn-sm btn-outline-warning"
+          style="border-color: #AE9463 !important; color: #AE9463 !important; outline: none !important;">
+          Download
+        </button>
+      </a>
+    </p>
+  </div>
+
+  <div class="solar-bg pt-5 mb-3">
+    <p class="main-header mb-4 py-0">
+      Secret Language of Birthdays & Relationships
+    </p>
+
+    <div class="image-section mt-3">
+      <img src="{{ user.image }}" alt="bg-icon" class="border-icon" />
+    </div>
+
+    <div class="mt-5">
+      <p class="name-age">{{ user.name }}, {{ user.age }}</p>
+      <p class="location">From: <span style="color: #AE9463;">{{ user.distance }}</span></p>
+      <p class="location" style="color: #AE9463;">{{ user.looking_for }}</p>
+    </div>
+
+    {{!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" class="wave-bg">
+      <path fill="#091624" fill-opacity="1"
+        d="M0,128L48,112C96,96,192,64,288,90.7C384,117,480,203,576,240C672,277,768,267,864,234.7C960,203,1056,149,1152,133.3C1248,117,1344,139,1392,149.3L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+      </path>
+    </svg> --}}
+    {{!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" class="wave-bg"><path fill="#091624" fill-opacity="1" d="M0,0L24,42.7C48,85,96,171,144,208C192,245,240,235,288,224C336,213,384,203,432,192C480,181,528,171,576,160C624,149,672,139,720,154.7C768,171,816,213,864,234.7C912,256,960,256,1008,240C1056,224,1104,192,1152,176C1200,160,1248,160,1296,133.3C1344,107,1392,53,1416,26.7L1440,0L1440,320L1416,320C1392,320,1344,320,1296,320C1248,320,1200,320,1152,320C1104,320,1056,320,1008,320C960,320,912,320,864,320C816,320,768,320,720,320C672,320,624,320,576,320C528,320,480,320,432,320C384,320,336,320,288,320C240,320,192,320,144,320C96,320,48,320,24,320L0,320Z"></path></svg> --}}
+    {{!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" class="wave-bg"><path fill="#091624" fill-opacity="1" d="M0,160L34.3,144C68.6,128,137,96,206,122.7C274.3,149,343,235,411,229.3C480,224,549,128,617,106.7C685.7,85,754,139,823,138.7C891.4,139,960,85,1029,90.7C1097.1,96,1166,160,1234,186.7C1302.9,213,1371,203,1406,197.3L1440,192L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z"></path></svg> --}}
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" class="wave-bg">
+      <path fill="#091624" fill-opacity="1"
+        d="M0,32L34.3,53.3C68.6,75,137,117,206,160C274.3,203,343,245,411,224C480,203,549,117,617,117.3C685.7,117,754,203,823,202.7C891.4,203,960,117,1029,80C1097.1,43,1166,53,1234,58.7C1302.9,64,1371,64,1406,64L1440,64L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z">
+      </path>
+    </svg>
+    {{!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" class="wave-bg"><path fill="#091624" fill-opacity="1" d="M0,96L34.3,96C68.6,96,137,96,206,117.3C274.3,139,343,181,411,170.7C480,160,549,96,617,90.7C685.7,85,754,139,823,165.3C891.4,192,960,192,1029,165.3C1097.1,139,1166,85,1234,80C1302.9,75,1371,117,1406,138.7L1440,160L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z"></path></svg> --}}
+  </div>
+
+  <div class="description-section pt-0">
+    <img src="{{ icon }}" alt="icon" class="sl-icon" />
+
+    <p class="sl-name-description mt-3">
+      The Secret Language name for {{ user.user_birthday }} is:
+    </p>
+
+    <p class="sl-name mb-0 mb-sm-2 mt-2">
+      {{ user.sln }}
+    </p>
+
+    <p class="famous-years my-3">
+      Since 1701, this very rare name has only been given the poeple born on this day in these years:
+      <span style="color: #AE9463;">{{ user.famous_years }}</span>
+    </p>
+
+    <p class="section-title mt-5 mb-3">
+      Look up a birthday
+    </p>
+    <p class="section-description">
+      {{ user.report }}
+    </p>
+
+    <p class="section-title mt-5 mb-3">
+      Numbers
+    </p>
+    <p class="section-description">
+      {{ user.numbers }}
+    </p>
+
+    <p class="section-title mt-5 mb-3">
+      Archetype
+    </p>
+    <p class="section-description">
+      {{ user.archetype }}
+    </p>
+
+    <p class="section-title mt-5 mb-3">
+      Health
+    </p>
+    <p class="section-description">
+      {{ user.health }}
+    </p>
+
+    <p class="section-title mt-5 mb-3">
+      Advice
+    </p>
+    <p class="section-description">
+      {{ user.advice }}
+    </p>
+
+    <div class="footer mt-5">
+      <p class="footer-line my-1">© 1994-2021, Gary Goldschneider, Thomas Rezek</p>
+      <p class="footer-line my-0">Joost Elffers. All Rights Reserved Worldwide. Designed by Doejo</p>
+    </div>
+  </div>
+  <a href="secretlanguageapp://profile={{ shareId }}" style="display: none;" id="hiddenAppLink"></a>
+</body>
+<script>
+  window.onload = () => {
+    let element = document.getElementById("hiddenAppLink");
+    element && element.click();
+    window.location = `secretlanguageapp://profile=${shareId}`;
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+</script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+  integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous">
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+  integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous">
+</script>
+
+</html>

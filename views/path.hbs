@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="robots" content="index, follow">
+  <meta name="googlebot" content="index, follow">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="msapplication-TileImage" content="{{ icon }}" />
+  <meta property="og:locale" content="hy_AM" />
+  <meta property="og:site_name" content="{{ report.name_long }}" />
+  <meta property="og:title" content="{{ metaTitle }}" />
+  <meta property="og:url" content="{{ sharedUrl }}" />
+  <meta property="og:type" content="article" />
+  <meta property="og:description" content="{{ report.report }}" />
+  <meta property="og:image:secure_url" content="{{ imageUrl }}" />
+  <meta property="og:image:width" content="500" />
+  <meta property="og:image:height" content="500" />
+  <meta property="og:image:url" content="{{ imageUrl }}" />
+
+  <meta itemprop="name" content="{{ metaTitle }}" />
+  <meta name='keywords' content="secret language network, relationships, online chat, horoscope, social networking service, dating, online dating service, social network, business, romance, books, astrology or friendship" />
+  <meta itemprop="headline" content="{{ metaTitle }}" />
+  <meta itemprop="description" content="{{ report.report }}" />
+  <meta itemprop="image" content="{{ imageUrl }}" />
+
+  <meta name="twitter:title" content="{{ metaTitle }}" />
+  <meta name="twitter:url" content="{{ sharedUrl }}" />
+  <meta name="twitter:description" content="{{ report.report }}" />
+  <meta name="twitter:image" content="{{ imageUrl }}" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@SecretLanguage" />
+
+  <link rel="canonical" href="{{ sharedUrl }}" />
+  <meta name="description" content="{{ report.report }}" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="icon" href="https://sln-storage.s3.us-east-2.amazonaws.com/icons/%F0%9F%92%96+icon.png" size="16x16" type="image/jpg">
+  <title>{{ report.name_long }}</title>
+  <style>
+    body {
+      color: #FFFFFF;
+      background: #091624;
+    }
+
+    .solar-bg {
+      background-image: url('https://sln-storage.s3.us-east-2.amazonaws.com/icons/solar-system-background.png') !important;
+      width: 100vw !important;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      mix-blend-mode: normal !important;
+    }
+
+    .main-header {
+      font-family: 'SignPainter';
+      font-style: italic;
+      font-weight: 600;
+      font-size: 55px;
+      line-height: 78px;
+      /* identical to box height, or 142% */
+
+      text-align: center;
+      letter-spacing: 0.1375px;
+
+      color: #FFFFFF;
+    }
+
+    .week {
+      display: flex !important;
+      align-items: center !important;
+      justify-content: space-between !important;
+
+      width: 60% !important;
+      margin: 100px auto !important;
+    }
+
+    .week-block {
+      display: flex !important;
+      justify-content: center !important;
+
+      flex-direction: column !important;
+    }
+
+    .week-header {
+      font-family: Avenir;
+      font-style: normal;
+      font-weight: 800;
+      font-size: 36px;
+      line-height: 20px;
+      /* identical to box height, or 56% */
+
+
+      color: #AE9463;
+    }
+
+    .date {
+      font-family: Gilroy;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 34px;
+      line-height: 34px;
+      /* or 101% */
+
+      color: #FFFFFF;
+    }
+
+    .and {
+      font-family: Avenir;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 36px;
+      line-height: 20px;
+      /* identical to box height, or 56% */
+
+      text-align: center;
+
+      color: #30547B;
+    }
+
+    .called {
+      font-family: Gilroy;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 25px;
+      line-height: 40px;
+      /* identical to box height, or 160% */
+
+      text-align: center;
+
+      color: #FFFFFF;
+
+      mix-blend-mode: normal;
+      opacity: 0.5;
+      width: 50% !important;
+
+      margin: 100px auto !important;
+      margin-bottom: 10px !important;
+    }
+
+    .border-icon {
+      width: 300px !important;
+      height: 300px !important;
+    }
+
+    .image-section {
+      display: flex !important;
+      justify-content: center !important;
+      align-items: center !important;
+
+      margin: 0 auto !important;
+      width: 300px !important;
+      height: 300px !important;
+    }
+
+    .rel-name {
+      font-family: Times;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 40px;
+      line-height: 46px;
+      /* identical to box height */
+
+      text-align: center;
+      text-transform: uppercase;
+
+      color: #AE9463;
+    }
+
+    .ideal {
+      font-family: Avenir;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 30px;
+      line-height: 30px;
+      /* or 100% */
+
+      text-align: center;
+
+      color: #FFFFFF;
+    }
+
+    .description-section {
+      display: flex !important;
+      justify-content: center !important;
+      align-items: center !important;
+      flex-direction: column !important;
+
+      margin: 0 auto !important;
+      width: 100vw !important;
+    }
+
+    .section-title {
+      max-width: 85% !important;
+      font-family: Gilroy;
+      font-style: normal;
+      font-weight: 800;
+      font-size: 36px;
+      line-height: 45px;
+      /* identical to box height */
+
+      text-align: center;
+      text-transform: uppercase;
+
+      color: #AE9463;
+    }
+
+    .section-description {
+      width: 85% !important;
+      font-family: Gilroy;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 24px;
+      line-height: 28px;
+      /* or 117% */
+
+      text-align: justify;
+
+      color: #FFFFFF;
+
+      mix-blend-mode: normal;
+      opacity: 0.7;
+    }
+
+    .footer {
+      display: flex !important;
+      justify-content: center !important;
+      align-items: center !important;
+      flex-direction: column !important;
+
+      width: 100% !important;
+      height: 200px !important;
+      background: #050E17 !important;
+
+      font-family: Avenir;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 24px;
+      line-height: 31px;
+      /* or 129% */
+
+      text-align: center;
+
+      color: #FFFFFF;
+    }
+
+    .sln-description {
+      font-family: Times;
+      font-style: italic;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 22px;
+
+      text-align: center;
+      letter-spacing: 0.045px;
+      width: 50%;
+      margin: 0 auto;
+
+      color: #AE9463 !important;
+    }
+
+    .main-text {
+      color: #fff;
+      font-size: 17px;
+    }
+
+    .famous {
+      width: 50%;
+    }
+
+    @media screen and (max-width: 1024px) {
+      .week {
+        width: 90% !important;
+      }
+
+      .sln-description {
+        width: 70%;
+      }
+
+      .famous {
+        width: 70%;
+      }
+    }
+
+    @media screen and (max-width: 576px) {
+      .main-header {
+        font-size: 34px;
+        line-height: 55px;
+      }
+
+      .sln-description {
+        width: 95%;
+      }
+
+      .famous {
+        width: 95% !important;
+      }
+
+      .week {
+        justify-content: space-around !important;
+        margin: 30px auto !important;
+      }
+
+      .sp-between {
+        justify-content: space-between !important;
+      }
+
+      .week-header {
+        font-size: 18px;
+        line-height: 20px;
+      }
+
+      .and {
+        font-size: 18px;
+        line-height: 20px;
+      }
+
+      .date {
+        font-size: 16px;
+        line-height: 18px;
+      }
+
+      .image-section {
+        width: 250px !important;
+        height: 250px !important;
+      }
+
+      .called {
+        font-size: 18px;
+        line-height: 22px;
+        margin: 10px auto !important;
+      }
+
+      .border-icon {
+        width: 200px !important;
+        height: 200px !important;
+      }
+
+      .image-section {
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+
+        margin: 0 auto !important;
+        width: 200px !important;
+        height: 200px !important;
+      }
+
+      .rel-name {
+        font-size: 25px;
+        line-height: 28px;
+      }
+
+      .ideal {
+        font-size: 20px;
+        line-height: 23px;
+      }
+
+      .section-title {
+        font-size: 28px !important;
+        line-height: 36px !important;
+      }
+
+      .section-description {
+        font-size: 15px !important;
+        line-height: 24px !important;
+      }
+
+      .footer {
+        height: 150px !important;
+        font-size: 13px;
+        line-height: 14px;
+      }
+
+      .footer-line {
+        width: 80% !important;
+      }
+    }
+  </style>
+</head>
+
+<body class="w-100 p-0 m-0" style="box-sizing: border-box;">
+  <div class="d-flex justify-content-center align-items-center d-md-none border-bottom w-100 px-4 row m-0 py-0"
+    style="border-color: #AE9463 !important; min-height: 75px !important;">
+    <p class="d-flex justify-start col-7 my-auto" style="background: #091624 !important;">
+      <img src="https://sln-storage.s3.us-east-2.amazonaws.com/icons/%F0%9F%92%96+icon.png"
+        class="rounded float-left p-1" width="45" height="45" alt="App Icon"
+        style="border: 1px solid #AE9463 !important;">
+      <span class="my-auto mx-2" style="font-size: 10.5px;">Secret Language of Birthdays & Relationships</span>
+    </p>
+    <p class="d-flex justify-content-end align-baseline col-5 my-auto">
+      <a href="https://apps.apple.com/us/app/secret-language-of-birthdays/id1558133582">
+        <button type="button" class="btn btn-sm btn-outline-warning"
+          style="border-color: #AE9463 !important; color: #AE9463 !important; outline: none !important;">
+          Download
+        </button>
+      </a>
+    </p>
+  </div>
+
+  <div class="solar-bg py-5 mb-3">
+    <p class="main-header mb-5 py-0">
+      Secret Language of Birthdays & Relationships
+    </p>
+
+    <div class="week">
+      <span class="rel-name mx-auto my-1 mb-0">{{ report.name_long }}</span>
+    </div>
+
+    <div class="image-section">
+      <img src="{{ report.image }}" alt="bg-icon" class="border-icon" />
+    </div>
+
+    <div class="ideal mt-3">Challenge: <span style="color: #AE9463;">{{ report.challenge }}</span></div>
+    <div class="ideal">Fulfillment: <span style="color: #AE9463;">{{ report.fulfillment }}</span></div>
+  </div>
+
+  <div class="description-section pt-0">
+    <p class="section-title mt-5 mb-3">
+      Report
+    </p>
+    <p class="section-description">
+      {{ report.report }}
+    </p>
+
+    <div class="footer mt-5">
+      <p class="footer-line my-1">© 1994-2021, Gary Goldschneider, Thomas Rezek</p>
+      <p class="footer-line my-0">Joost Elffers. All Rights Reserved Worldwide. Designed by Doejo</p>
+    </div>
+  </div>
+
+  <a href="secretlanguageapp://path={{ shareId }}" style="display: none;" id="hiddenAppLink"></a>
+</body>
+<script>
+  window.onload = () => {
+    let element = document.getElementById("hiddenAppLink");
+    element && element.click();
+    window.location = `secretlanguageapp://path=${shareId}`;
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+</script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+  integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous">
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+  integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous">
+</script>
+
+</html>

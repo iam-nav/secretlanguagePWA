@@ -1,0 +1,23 @@
+db:
+  port: 5432
+  database:
+  host:
+  username:
+  password:
+  synchronize: true
+
+jwt:
+  secret:
+  admin_secret:
+
+notifications:
+  key: ''
+  team: ''
+  bundle: ''
+  production: true
+
+aws:
+  STORAGE_URL:
+
+url:
+  base:
