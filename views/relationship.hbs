@@ -38,403 +38,209 @@
   <link rel="icon" href="https://sln-storage.s3.us-east-2.amazonaws.com/icons/%F0%9F%92%96+icon.png" size="16x16" type="image/jpg">
   <title>{{ report.name }}</title>
   <style>
-    body {
-      color: #FFFFFF;
-      background: #091624;
-    }
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  color: #FFFFFF;
+  background: #091624;
+  background-image: url('https://sln-storage.s3.us-east-2.amazonaws.com/icons/solar-system-background.png') !important;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.borderc{
+  border: solid 1px #AE9463 !important;
+}
+.borderbottom{
+  border-bottom: solid 1px;
+}
+.bcolor{
+  border-color: #AE9463 !important;
+}
+.logo{
+  border-radius: 10px;
+}
+.logoimg{
+  width: 3rem;
+  height: 3rem;
+  border-radius: 10px;
+}
+.tcolor{
+  color: #AE9463 !important;
+}
+
+.dateimg{
+  width: 8rem;
+  height: 8rem;
+}
+
+.footer{
+  background: #050E17 !important;
+  font-family: Avenir;
+  text-align: center;
+}
+
+@media (min-width:320px) and (max-width:570px) {
+  .dateimg{
+    width: 6rem;
+    height: 7rem;
+  }
+}
+
+@media (min-width: 576px) {  
+  .dateimg{
+    width: 8rem;
+    height: 8rem;
+  }
+}
+
+@media (min-width: 768px) { 
+  .dateimg{
+    width: 10rem;
+    height: 10rem;
+  }
+}
+
+@media (min-width: 992px) { 
+  .dateimg{
+    width: 11rem;
+    height: 11rem;
+  }
+}
+
+@media (min-width: 1200px) { 
+  .dateimg{
+    width: 12rem;
+    height: 12rem;
+  }
+}
+
+@media (min-width: 1400px) { 
+  .dateimg{
+    width: 13rem;
+    height: 13rem;
+  }
+}
 
-    .solar-bg {
-      background-image: url('https://sln-storage.s3.us-east-2.amazonaws.com/icons/solar-system-background.png') !important;
-      width: 100vw !important;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-
-      mix-blend-mode: normal !important;
-    }
-
-    .main-header {
-      font-family: 'SignPainter';
-      font-style: italic;
-      font-weight: 600;
-      font-size: 55px;
-      line-height: 78px;
-      /* identical to box height, or 142% */
-
-      text-align: center;
-      letter-spacing: 0.1375px;
-
-      color: #FFFFFF;
-    }
-
-    .week {
-      display: flex !important;
-      align-items: center !important;
-      justify-content: space-between !important;
-
-      width: 60% !important;
-      margin: 100px auto !important;
-    }
-
-    .week-block {
-      display: flex !important;
-      justify-content: center !important;
-
-      flex-direction: column !important;
-    }
-
-    .week-header {
-      font-family: Avenir;
-      font-style: normal;
-      font-weight: 800;
-      font-size: 36px;
-      line-height: 20px;
-      /* identical to box height, or 56% */
-
-
-      color: #AE9463;
-    }
-
-    .date {
-      font-family: Gilroy;
-      font-style: normal;
-      font-weight: normal;
-      font-size: 34px;
-      line-height: 34px;
-      /* or 101% */
-
-
-      color: #FFFFFF;
-    }
-
-    .and {
-      font-family: Avenir;
-      font-style: normal;
-      font-weight: 500;
-      font-size: 36px;
-      line-height: 20px;
-      /* identical to box height, or 56% */
-
-      text-align: center;
-
-      color: #30547B;
-    }
-
-    .called {
-      font-family: Gilroy;
-      font-style: normal;
-      font-weight: normal;
-      font-size: 25px;
-      line-height: 40px;
-      /* identical to box height, or 160% */
-
-      text-align: center;
-
-      color: #FFFFFF;
-
-      mix-blend-mode: normal;
-      opacity: 0.5;
-      width: 50% !important;
-
-      margin: 100px auto !important;
-      margin-bottom: 10px !important;
-    }
-
-    .border-icon {
-      width: 300px !important;
-      height: 300px !important;
-    }
-
-    .image-section {
-      display: flex !important;
-      justify-content: center !important;
-      align-items: center !important;
-
-      margin: 0 auto !important;
-      width: 300px !important;
-      height: 300px !important;
-    }
-
-    .rel-name {
-      font-family: Times;
-      font-style: normal;
-      font-weight: bold;
-      font-size: 40px;
-      line-height: 46px;
-      /* identical to box height */
-
-      text-align: center;
-      text-transform: uppercase;
-
-      color: #AE9463;
-    }
-
-    .ideal {
-      font-family: Avenir;
-      font-style: normal;
-      font-weight: 500;
-      font-size: 30px;
-      line-height: 30px;
-      /* or 100% */
-
-      text-align: center;
-
-      color: #FFFFFF;
-    }
-
-    .description-section {
-      display: flex !important;
-      justify-content: center !important;
-      align-items: center !important;
-      flex-direction: column !important;
-
-      margin: 0 auto !important;
-      width: 100vw !important;
-    }
-
-    .section-title {
-      max-width: 85% !important;
-      font-family: Gilroy;
-      font-style: normal;
-      font-weight: 800;
-      font-size: 36px;
-      line-height: 45px;
-      /* identical to box height */
-
-      text-align: center;
-      text-transform: uppercase;
-
-      color: #AE9463;
-    }
-
-    .section-description {
-      width: 85% !important;
-      font-family: Gilroy;
-      font-style: normal;
-      font-weight: normal;
-      font-size: 24px;
-      line-height: 28px;
-      /* or 117% */
-
-      text-align: justify;
-
-      color: #FFFFFF;
-
-      mix-blend-mode: normal;
-      opacity: 0.7;
-    }
-
-    .footer {
-      display: flex !important;
-      justify-content: center !important;
-      align-items: center !important;
-      flex-direction: column !important;
-
-      width: 100% !important;
-      height: 200px !important;
-      background: #050E17 !important;
-
-      font-family: Avenir;
-      font-style: normal;
-      font-weight: normal;
-      font-size: 24px;
-      line-height: 31px;
-      /* or 129% */
-
-      text-align: center;
-
-      color: #FFFFFF;
-    }
-
-     @media screen and (max-width: 1024px) {
-       .week {
-         width: 90% !important;
-       }
-     }
-
-    @media screen and (max-width: 576px) {
-      .main-header {
-        font-size: 34px;
-        line-height: 55px;
-      }
-
-      .week {
-        justify-content: space-around !important;
-        margin: 30px auto !important;
-      }
-
-      .sp-between {
-        justify-content: space-between !important;
-      }
-
-      .week-header {
-        font-size: 18px;
-        line-height: 20px;
-      }
-
-      .and {
-        font-size: 18px;
-        line-height: 20px;
-      }
-
-      .date {
-        font-size: 16px;
-        line-height: 18px;
-      }
-
-      .image-section {
-        width: 250px !important;
-        height: 250px !important;
-      }
-
-      .called {
-        font-size: 18px;
-        line-height: 22px;
-        margin: 10px auto !important;
-      }
-
-      .border-icon {
-        width: 200px !important;
-        height: 200px !important;
-      }
-
-      .image-section {
-        display: flex !important;
-        justify-content: center !important;
-        align-items: center !important;
-
-        margin: 0 auto !important;
-        width: 200px !important;
-        height: 200px !important;
-      }
-
-      .rel-name {
-        font-size: 25px;
-        line-height: 28px;
-      }
-
-      .ideal {
-        font-size: 20px;
-        line-height: 23px;
-      }
-
-      .section-title {
-        font-size: 28px !important;
-        line-height: 36px !important;
-      }
-
-      .section-description {
-        font-size: 15px !important;
-        line-height: 24px !important;
-      }
-
-      .footer {
-        height: 150px !important;
-        font-size: 13px;
-        line-height: 14px;
-      }
-
-      .footer-line {
-        width: 80% !important;
-      }
-    }
   </style>
 </head>
-
-<body class="w-100 p-0 m-0" style="box-sizing: border-box;">
-  <div class="d-flex justify-content-center align-items-center d-md-none border-bottom w-100 px-4 row m-0 py-0"
-    style="border-color: #AE9463 !important; min-height: 75px !important;">
-    <p class="d-flex justify-start col-7 my-auto" style="background: #091624 !important;">
-      <img src="https://sln-storage.s3.us-east-2.amazonaws.com/icons/%F0%9F%92%96+icon.png"
-        class="rounded float-left p-1" width="45" height="45" alt="App Icon"
-        style="border: 1px solid #AE9463 !important;">
-      <span class="my-auto mx-2" style="font-size: 10.5px;">Secret Language of Birthdays & Relationships</span>
-    </p>
-    <p class="d-flex justify-content-end align-baseline col-5 my-auto">
-      <a href="https://apps.apple.com/us/app/secret-language-of-birthdays/id1558133582">
-        <button type="button" class="btn btn-sm btn-outline-warning"
-          style="border-color: #AE9463 !important; color: #AE9463 !important; outline: none !important;">
-          Download
-        </button>
-      </a>
-    </p>
-  </div>
-
-  <div class="solar-bg py-5 mb-3">
-    <p class="main-header mb-5 py-0">
-      Secret Language of Birthdays & Relationships
-    </p>
-
-    <div class="week">
-      <div class="week-block">
-        <span class="week-header">
-          {{ report.birthday_1 }}
-        </span>
-        <span class="date my-1 my-sm-3">{{ report.birthday_1_name }}</span>
+  <body>
+    <div class="container">
+      <div class="row borderbottom align-items-center d-md-none py-1 ">
+        <div class="col-6">
+          <img src="./AppIcon.png" class="logoimg borderc bcolor" alt="App Icon">
+        </div>
+        <div class="col-6 text-end">
+          <a href="https://apps.apple.com/us/app/secret-language-of-birthdays/id1558133582">
+            <button type="button" class="btn btn-sm btn-outline-warning">Download </button>
+          </a>
+        </div>
       </div>
-      <span class="and">&</span>
-      <div class="week-block" style="align-items: flex-end;">
-        <span class="week-header" style="align-items: flex-end;">
-          {{ report.birthday_2 }}
-        </span>
-        <span class="date my-1 my-sm-3">{{ report.birthday_2_name }}</span>
+    </div>
+<!-- --------------------------------------- -->
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h1 class="mb-3 mt-1 text-center fs-lg-1 fs-xl-1 fs-md-2 fs-sm-3 fs-xs-3 "><span class="borderbottom bcolor">Secret Language of Birthdays & Relationships</span></h1>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-5 text-left">
+          <p class="tcolor fs-sm-5 fs-md-4 fs-lg-2 fs-xl-2  m-0">{{ report.birthday_1 }}</p>
+          <p class="text-white fs-4">{{ report.birthday_1_name }}</p>
+        </div>
+        <div class="col-2 text-center">
+          <p class="and bcolor ">&</p>
+        </div>
+        <div class="col-5 text-end">
+          <p class=" fs-xs-5 fs-sm-5 fs-md-4 fs-lg-2 fs-xl-2  tcolor m-0">{{ report.birthday_2 }}</p>
+          <p class="fs-4 ">{{ report.birthday_2_name }}</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12 text-center ">
+          <p class="tcolor my-1 fs-3 fs-xs-5 fs-sm-5 fs-md-4 fs-lg-2 fs-xl-2 ">IS CALLED</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-4  text-start">
+          <p class="date mb-1">{{ report.s1 }}</p>
+          <p class="date mb-1">{{ report.s2 }}</p>
+          <p class="date mb-1">{{ report.s3 }}</p>
+        </div>
+        <div class="col-4 text-center">
+          <img src="{{ report.image }}" alt="bg-icon" class="dateimg" />
+        </div>
+        <div class="col-4 pr-2 text-end">
+          <p class="date mb-1">{{ report.w1 }}</p>
+          <p class="date mb-1">{{ report.w2 }}</p>
+          <p class="date mb-1">{{ report.w3 }}</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12 text-center">
+          <p class="fs-1 m-0 tcolor fw-bold text-uppercase">{{ report.name }}</p>
+          <p class="f-4">Ideal for: <span class="fs-3 tcolor text-uppercase">{{ report.ideal_for }}</span></p>
+          <p class="f-4 d-none">Problematic for: <span class="fs-3 tcolor text-uppercase">{{ report.problematic_for }}</span></p>
+        </div>
+      </div>
+
+      <div class="row border-top bcolor">
+        <div class="col-12">
+          <h1 class="fs-1 py-3 text-center tcolor">Relationship Report</h1>
+        </div>
+        <div class="col-12">
+          <p class="d-none" id="rreport">{{ report.report }}</p>
+          <p class="text-justify mt-2 fs-md-5 fs-lg-6" id="rsreport"></p>
+        </div>
+      </div>
+
+      <div class="row border-top bcolor my-4">
+        <div class="col-12">
+          <h1 class="fs-1 py-3 text-center text-capitalize tcolor">Advice</h1>
+        </div>
+        <div class="col-12">
+          <p class="fs-md-5 fs-lg-6" id="radvice">{{ report.advice }}</p>
+        </div>
       </div>
     </div>
 
-    <div class="called">IS CALLED</div>
-
-    <div class="image-section">
-      <img src="{{ report.image }}" alt="bg-icon" class="border-icon" />
-    </div>
-
-    <div class="rel-name">{{ report.name }}</div>
-
-    <div class="week sp-between">
-      <div class="week-block">
-        <span class="date mb-1">{{ report.s1 }}</span>
-        <span class="date mb-1">{{ report.s2 }}</span>
-        <span class="date mb-1">{{ report.s3 }}</span>
-      </div>
-      <div class="week-block" style="align-items: flex-end;">
-        <span class="date mb-1">{{ report.w1 }}</span>
-        <span class="date mb-1">{{ report.w2 }}</span>
-        <span class="date mb-1">{{ report.w3 }}</span>
-      </div>
-    </div>
-
-    <div class="ideal">Ideal for: <span style="color: #AE9463;">{{ report.ideal_for }}</span></div>
-    <div class="ideal">Problematic for: <span style="color: #AE9463;">{{ report.problematic_for }}</span></div>
-  </div>
-
-  <div class="description-section pt-0">
-    <p class="section-title mt-5 mb-3">
-      Relationship report
-    </p>
-    <p class="section-description">
-      {{ report.report }}
-    </p>
-
-    <p class="section-title mt-5 mb-3">
-      Advice
-    </p>
-    <p class="section-description">
-      {{ report.advice }}
-    </p>
-
-    <div class="footer mt-5">
+    <footer class="footer mt-5 p-5">
       <p class="footer-line my-1">© 1994-2021, Gary Goldschneider, Thomas Rezek</p>
       <p class="footer-line my-0">Joost Elffers. All Rights Reserved Worldwide. Designed by Doejo</p>
-    </div>
-  </div>
-  <a href="secretlanguageapp://relationship={{ shareId }}" style="display: none;" id="hiddenAppLink"></a>
-</body>
-<script>
-  window.onload = () => {
-    let element = document.getElementById("hiddenAppLink");
-    element && element.click();
-    window.location = `secretlanguageapp://relationship=${shareId}`;
-  };
-</script>
+    </footer>
+
+    <a href="secretlanguageapp://relationship={{ shareId }}" style="display: none;" id="hiddenAppLink"></a>
+
+  </body>
+
+  <script>
+    document.getElementById('rsreport').innerHTML = document.getElementById('rreport').innerHTML.slice(0, 350) + '<br> <button class="btn btn-primary mt-3" onclick="show()">Read More...</button>';
+  
+    function show() {
+      document.getElementById('rsreport').innerHTML = document.getElementById('rreport').innerHTML + '<br> <button class="btn btn-primary mt-3" onclick="hide()">Show Less...</button>';
+    }
+    function hide() {
+      document.getElementById('rsreport').innerHTML = document.getElementById('rreport').innerHTML.slice(0, 350) + '<br> <button class="btn btn-primary mt-3" onclick="show()">Read More...</button>';
+    }
+  </script>
+  
+  <script>
+    window.onload = () => {
+      let element = document.getElementById("hiddenAppLink");
+      element && element.click();
+      window.location = `secretlanguageapp://relationship=${shareId}`;
+    };
+  </script>
+  
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
   integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
 </script>
