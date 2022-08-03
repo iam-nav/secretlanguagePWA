@@ -1,0 +1,21 @@
+server:
+  port:3001
+
+db:
+  type: 'postgres'
+  database: 'sl'
+  host: 'sl.c7tsf3bkkcgu.us-east-2.rds.amazonaws.com'
+  username: 'ubuntu'
+  password: 'Secret123$'
+  synchronize: true
+
+jwt:
+  expiresIn: 253402300000000
+
+APPLE_PAY:
+  LIVE_URL: 'https://buy.itunes.apple.com/verifyReceipt'
+  SANDBOX_URL: 'https://sandbox.itunes.apple.com/verifyReceipt'
+
+MESSAGE_BIRD:
+  KEY: ''
+  PHONE: ''
