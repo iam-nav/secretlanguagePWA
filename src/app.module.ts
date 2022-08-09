@@ -31,6 +31,7 @@ import { PathRepository } from './path/repository/path.repository';
 import { SeasonRepository } from './season/repository/season.repository';
 import { WayRepository } from './way/repository/way.repository';
 import { WeekRepository } from './week/repository/week.repository';
+import { ShareReportedModule } from './report-share/report.share.module';
 
 @Module({
   imports: [
@@ -67,6 +68,7 @@ import { WeekRepository } from './week/repository/week.repository';
     PaymentModule,
     AdminModule,
     CitiesModule,
+    ShareReportedModule
   ],
   controllers: [ShareController],
   providers: [ShareService],
