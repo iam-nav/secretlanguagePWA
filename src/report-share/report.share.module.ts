@@ -8,3 +8,4 @@ import { ShareReportedRepository } from './repository/report.share.repository';
   providers: [reportedShareService],
 })
 export class ShareReportedModule {}
+//.
